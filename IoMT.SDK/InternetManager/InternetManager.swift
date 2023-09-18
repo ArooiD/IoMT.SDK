@@ -39,8 +39,8 @@ class InternetManager{
     }
     
     internal init(login: String, password: String, debug: Bool, callback: DeviceCallback) {
-        let encData: Data = (login + ":" + password).data(using: .utf8)!
-        self.auth = encData.base64EncodedString().replace("\n", with: "")
+        self.auth = Data((login + ":" + password).utf8).base64EncodedString()
+                                                            
         apiAddress = "/gateway/iiot/api/Observation/data"
         if(!debug){ baseAddress = "https://ppma.ru" }
         else{ baseAddress = "http://test.ppma.ru" }
