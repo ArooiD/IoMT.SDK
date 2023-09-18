@@ -122,6 +122,15 @@ public class DeviceService {
         }
     }
     
+    public func sendData(connectClass: ConnectClass, serial: String, model: String, time: Date, value: Double)
+    {
+        if(instanceDS == nil) { return; }
+        if(connectClass is EltaGlucometr){
+            let postData = FhirTemplate.Glucometer(serial: serial, model: model, effectiveDateTime: time, value: value)
+            im.postResource(data: postData!)
+        }
+    }
+    
     ///Отправка данных будет производиться на тестовую площадку <test.ppma.ru>
     public func toTest() {
         _test = true
