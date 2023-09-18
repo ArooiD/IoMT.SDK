@@ -6,10 +6,6 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		2F21312D2AB8564C007F8FD2 /* IoMT_SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F21312C2AB8564C007F8FD2 /* IoMT_SDK.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		2F2131272AB8564C007F8FD2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,7 +20,17 @@
 
 /* Begin PBXFileReference section */
 		2F2131292AB8564C007F8FD2 /* libIoMT.SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIoMT.SDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F21312C2AB8564C007F8FD2 /* IoMT_SDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoMT_SDK.swift; sourceTree = "<group>"; };
+		2F21315E2AB858B8007F8FD2 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
+		2F2131602AB858BA007F8FD2 /* ConnectClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectClass.swift; sourceTree = "<group>"; };
+		2F2131612AB858BA007F8FD2 /* EltaGlucometr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EltaGlucometr.swift; sourceTree = "<group>"; };
+		2F2131622AB858BA007F8FD2 /* AndTonometr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndTonometr.swift; sourceTree = "<group>"; };
+		2F2131642AB858C0007F8FD2 /* BleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BleManager.swift; sourceTree = "<group>"; };
+		2F2131652AB858C0007F8FD2 /* DeviceBleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBleManager.swift; sourceTree = "<group>"; };
+		2F2131662AB858C0007F8FD2 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		2F2131672AB858C0007F8FD2 /* DataCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollector.swift; sourceTree = "<group>"; };
+		2F2131682AB858C0007F8FD2 /* DevicesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesEnum.swift; sourceTree = "<group>"; };
+		2F2131692AB858C0007F8FD2 /* FhirTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FhirTemplate.swift; sourceTree = "<group>"; };
+		2F21316A2AB858C0007F8FD2 /* DeviceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCallback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,43 @@
 		2F21312B2AB8564C007F8FD2 /* IoMT.SDK */ = {
 			isa = PBXGroup;
 			children = (
-				2F21312C2AB8564C007F8FD2 /* IoMT_SDK.swift */,
+				2F2131632AB858C0007F8FD2 /* MainServices */,
+				2F21315F2AB858BA007F8FD2 /* ConnectClass */,
+				2F21315D2AB858B7007F8FD2 /* InternetManager */,
 			);
 			path = IoMT.SDK;
+			sourceTree = "<group>";
+		};
+		2F21315D2AB858B7007F8FD2 /* InternetManager */ = {
+			isa = PBXGroup;
+			children = (
+				2F21315E2AB858B8007F8FD2 /* InternetManager.swift */,
+			);
+			path = InternetManager;
+			sourceTree = "<group>";
+		};
+		2F21315F2AB858BA007F8FD2 /* ConnectClass */ = {
+			isa = PBXGroup;
+			children = (
+				2F2131622AB858BA007F8FD2 /* AndTonometr.swift */,
+				2F2131602AB858BA007F8FD2 /* ConnectClass.swift */,
+				2F2131612AB858BA007F8FD2 /* EltaGlucometr.swift */,
+			);
+			path = ConnectClass;
+			sourceTree = "<group>";
+		};
+		2F2131632AB858C0007F8FD2 /* MainServices */ = {
+			isa = PBXGroup;
+			children = (
+				2F2131682AB858C0007F8FD2 /* DevicesEnum.swift */,
+				2F2131672AB858C0007F8FD2 /* DataCollector.swift */,
+				2F2131642AB858C0007F8FD2 /* BleManager.swift */,
+				2F21316A2AB858C0007F8FD2 /* DeviceCallback.swift */,
+				2F2131652AB858C0007F8FD2 /* DeviceBleManager.swift */,
+				2F2131662AB858C0007F8FD2 /* DeviceService.swift */,
+				2F2131692AB858C0007F8FD2 /* FhirTemplate.swift */,
+			);
+			path = MainServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F21312D2AB8564C007F8FD2 /* IoMT_SDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
