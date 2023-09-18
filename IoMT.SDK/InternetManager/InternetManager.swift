@@ -92,8 +92,10 @@ class InternetManager{
         urlRequest.httpMethod = "POST"
         urlRequest.addValue("Authorization", forHTTPHeaderField: "Basic " + self.auth)
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        //urlRequest
+        
         urlRequest.httpBody = data
+        
+        var result = urlRequest.allHTTPHeaderFields;
         
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
