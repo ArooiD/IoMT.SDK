@@ -90,7 +90,7 @@ class InternetManager{
         
         var identifier = UUID();
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization", forHTTPHeaderField: self.auth)
+        urlRequest.addValue("Authorization ", forHTTPHeaderField: "Basic " + self.auth)
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         //urlRequest
         urlRequest.httpBody = data
