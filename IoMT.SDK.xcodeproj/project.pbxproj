@@ -31,6 +31,7 @@
 		2F2131682AB858C0007F8FD2 /* DevicesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesEnum.swift; sourceTree = "<group>"; };
 		2F2131692AB858C0007F8FD2 /* FhirTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FhirTemplate.swift; sourceTree = "<group>"; };
 		2F21316A2AB858C0007F8FD2 /* DeviceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCallback.swift; sourceTree = "<group>"; };
+		2F2DA6052AB88C9B0096A741 /* IoMT.SDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IoMT.SDK.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 		2F2131202AB8564C007F8FD2 = {
 			isa = PBXGroup;
 			children = (
+				2F2DA6052AB88C9B0096A741 /* IoMT.SDK.podspec */,
 				2F21312B2AB8564C007F8FD2 /* IoMT.SDK */,
 				2F21312A2AB8564C007F8FD2 /* Products */,
 			);
