@@ -54,7 +54,7 @@ class InternetManager{
         var urlRequest: URLRequest = URLRequest(url: self.urlGateWay)
         
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization ", forHTTPHeaderField: "Basic " + self.auth)
+        urlRequest.addValue("Authorization", forHTTPHeaderField: "Basic " + self.auth)
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         //urlRequest
         urlRequest.httpBody = data
@@ -90,7 +90,7 @@ class InternetManager{
         
         var identifier = UUID();
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization ", forHTTPHeaderField: "Basic " + self.auth)
+        urlRequest.addValue("Authorization", forHTTPHeaderField: "Basic " + self.auth)
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         //urlRequest
         urlRequest.httpBody = data
