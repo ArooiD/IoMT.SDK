@@ -114,8 +114,7 @@ public class EltaGlucometr:
     // This method will be triggered once device will be disconnected.
     internal func bleManagerDisConect(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         callback?.onStatusDevice(mac: _identifer!, status: BluetoothStatus.ConnectDisconnect)
-        if(self.measurements == nil) { return; }
-        
+        if(self.measurements == nil) return;
         let ret = self.measurements?.returnData()
         callback?.onDisconnect(mac: peripheral.identifier, data: ret!)
         DispatchQueue.global().async {
