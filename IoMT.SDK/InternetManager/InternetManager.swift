@@ -85,6 +85,43 @@ class InternetManager{
         task.resume()
     }
     
+    internal func postResource(data: Data) {
+        var urlRequest: URLRequest = URLRequest(url: self.urlGateWay)
+        
+        var identifier = UUID();
+        urlRequest.httpMethod = "POST"
+        urlRequest.addValue("Authorization", forHTTPHeaderField: self.auth)
+        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        //urlRequest
+        urlRequest.httpBody = data
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                self.callback.onExpection(mac: identifier, ex: error)
+                print("Error: \(error)")
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                let statusCode = httpResponse.statusCode
+                if(statusCode <= 202){
+                    print("Status Code: \(statusCode)")
+                    self.callback.onSendData(mac: identifier, status: PlatformStatus.Success)
+                }
+                else{
+                    self.callback.onSendData(mac: identifier, status: PlatformStatus.Failed)
+                }
+            }
+            if let responseData = data {
+                if let responseString = String(data: responseData, encoding: .utf8) {
+                    print("Response: \(responseString)")
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    
     internal func getTime(serial: String){
         let timeUrl  = URL(string: (self.baseAddress + self.apiAddress + "?serial=\(serial)&type=effectiveDateTime"))!
         var urlRequest: URLRequest = URLRequest(url: timeUrl)
