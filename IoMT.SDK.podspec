@@ -14,4 +14,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '11.0'
   spec.swift_version = '5.0'
   spec.source       = { :git => "https://github.com/ArooiD/IoMT.SDK/IoMT.SDK.git", :tag => "#{spec.version}" }
+  spec.preserve_paths = 'IoMT.SDK/*'
 end
