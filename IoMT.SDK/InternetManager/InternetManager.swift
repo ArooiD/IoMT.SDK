@@ -40,7 +40,7 @@ class InternetManager{
     
     internal init(login: String, password: String, debug: Bool, callback: DeviceCallback) {
         let encData: Data = (login + ":" + password).data(using: .utf8)!
-        self.auth = "Basic ".appending(encData.base64EncodedString())
+        self.auth = encData.base64EncodedString()
         apiAddress = "/gateway/iiot/api/Observation/data"
         if(!debug){ baseAddress = "https://ppma.ru" }
         else{ baseAddress = "http://test.ppma.ru" }
@@ -54,7 +54,7 @@ class InternetManager{
         var urlRequest: URLRequest = URLRequest(url: self.urlGateWay)
         
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization", forHTTPHeaderField: self.auth)
+        urlRequest.addValue("Authorization ", forHTTPHeaderField: "Basic " + self.auth)
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         //urlRequest
         urlRequest.httpBody = data
