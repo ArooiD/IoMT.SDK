@@ -40,8 +40,8 @@ class InternetManager{
     
     internal init(login: String, password: String, debug: Bool, callback: DeviceCallback) {
         self.auth = Data((login + ":" + password).utf8).base64EncodedString()
-                                                            
-        apiAddress = "/gateway/iiot/api/Observation/data"
+                      ///gateway
+        apiAddress = "/iiot/api/Observation/data"
         if(!debug){
             //baseAddress = "https://ppma.ru"
             baseAddress = "http://192.168.8.246:8080"
