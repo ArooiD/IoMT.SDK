@@ -57,7 +57,7 @@ class InternetManager{
         var urlRequest: URLRequest = URLRequest(url: self.urlGateWay)
         
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization", forHTTPHeaderField: "Basic " + self.auth)
+        urlRequest.addValue("Basic " + self.auth, forHTTPHeaderField: "Authorization")
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         //urlRequest
         urlRequest.httpBody = data
@@ -93,7 +93,7 @@ class InternetManager{
         
         var identifier = UUID();
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("Authorization", forHTTPHeaderField: "Basic " + self.auth)
+        urlRequest.addValue("Basic " + self.auth, forHTTPHeaderField: "Authorization")
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         urlRequest.httpBody = data
@@ -131,7 +131,7 @@ class InternetManager{
         let timeUrl  = URL(string: (self.baseAddress + self.apiAddress + "?serial=\(serial)&type=effectiveDateTime"))!
         var urlRequest: URLRequest = URLRequest(url: timeUrl)
         urlRequest.httpMethod = "GET"
-        urlRequest.addValue("Authorization", forHTTPHeaderField: self.auth)
+        urlRequest.addValue("Basic " + self.auth, forHTTPHeaderField: "Authorization")
         
         let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
