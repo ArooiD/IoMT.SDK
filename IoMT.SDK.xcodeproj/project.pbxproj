@@ -6,6 +6,12 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2F5E9DC92B15CFE500DC3E29 /* QueueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E9DC82B15CFE500DC3E29 /* QueueService.swift */; };
+		2F5E9DCB2B15D01000DC3E29 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E9DCA2B15D01000DC3E29 /* NetService.swift */; };
+		B26F4C573B5883085B002E42 /* Pods_IoMT_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1B431ABD6097E270CFE572 /* Pods_IoMT_SDK.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		2F2131272AB8564C007F8FD2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -33,6 +39,11 @@
 		2F21316A2AB858C0007F8FD2 /* DeviceCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCallback.swift; sourceTree = "<group>"; };
 		2F2DA6052AB88C9B0096A741 /* IoMT.SDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IoMT.SDK.podspec; sourceTree = "<group>"; };
 		2F2DA6202AB8940D0096A741 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2F5E9DC82B15CFE500DC3E29 /* QueueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueService.swift; sourceTree = "<group>"; };
+		2F5E9DCA2B15D01000DC3E29 /* NetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
+		5B1B431ABD6097E270CFE572 /* Pods_IoMT_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IoMT_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		818B1360FA5E77613A00E77B /* Pods-IoMT.SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoMT.SDK.release.xcconfig"; path = "Target Support Files/Pods-IoMT.SDK/Pods-IoMT.SDK.release.xcconfig"; sourceTree = "<group>"; };
+		CCD308F652C2631C975C1ED3 /* Pods-IoMT.SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoMT.SDK.debug.xcconfig"; path = "Target Support Files/Pods-IoMT.SDK/Pods-IoMT.SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,12 +51,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26F4C573B5883085B002E42 /* Pods_IoMT_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EA0FA9986DA08BC689D011F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCD308F652C2631C975C1ED3 /* Pods-IoMT.SDK.debug.xcconfig */,
+				818B1360FA5E77613A00E77B /* Pods-IoMT.SDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2F2131202AB8564C007F8FD2 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +74,8 @@
 				2F2DA6052AB88C9B0096A741 /* IoMT.SDK.podspec */,
 				2F21312B2AB8564C007F8FD2 /* IoMT.SDK */,
 				2F21312A2AB8564C007F8FD2 /* Products */,
+				1EA0FA9986DA08BC689D011F /* Pods */,
+				6430A7261BC11EC50F7540D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +125,18 @@
 				2F2131652AB858C0007F8FD2 /* DeviceBleManager.swift */,
 				2F2131662AB858C0007F8FD2 /* DeviceService.swift */,
 				2F2131692AB858C0007F8FD2 /* FhirTemplate.swift */,
+				2F5E9DC82B15CFE500DC3E29 /* QueueService.swift */,
+				2F5E9DCA2B15D01000DC3E29 /* NetService.swift */,
 			);
 			path = MainServices;
+			sourceTree = "<group>";
+		};
+		6430A7261BC11EC50F7540D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B1B431ABD6097E270CFE572 /* Pods_IoMT_SDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +146,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F2131302AB8564C007F8FD2 /* Build configuration list for PBXNativeTarget "IoMT.SDK" */;
 			buildPhases = (
+				1C3EB60A3D9D70E47A7A3B7A /* [CP] Check Pods Manifest.lock */,
 				2F2131252AB8564C007F8FD2 /* Sources */,
 				2F2131262AB8564C007F8FD2 /* Frameworks */,
 				2F2131272AB8564C007F8FD2 /* CopyFiles */,
@@ -138,6 +172,7 @@
 				TargetAttributes = {
 					2F2131282AB8564C007F8FD2 = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -159,11 +194,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C3EB60A3D9D70E47A7A3B7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IoMT.SDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F2131252AB8564C007F8FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5E9DC92B15CFE500DC3E29 /* QueueService.swift in Sources */,
+				2F5E9DCB2B15D01000DC3E29 /* NetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +348,16 @@
 		};
 		2F2131312AB8564C007F8FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD308F652C2631C975C1ED3 /* Pods-IoMT.SDK.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69A943J88V;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IoMT.SDK/MainServices/IoMT.SDK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,12 +365,15 @@
 		};
 		2F2131322AB8564C007F8FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818B1360FA5E77613A00E77B /* Pods-IoMT.SDK.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69A943J88V;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IoMT.SDK/MainServices/IoMT.SDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
